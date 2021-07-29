@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM model</title>
+    <style>
+        h2{
+            text-align: center;
+            
+        }
+        .box{
+            border: 2px solid black;
+            padding: 10px;
+            margin:10px;
+            background-color: rgb(177, 222, 135);
+        }
+
+        button{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+
+    
+
+</head>
+<body>
+    
+    <h2>Here we are using CSS and JS DOM to change content dynamically</h2>
+<div class="box">
+    <p id="color">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste voluptates quia illo sapiente tempore aut aspernatur ducimus harum beatae officiis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius maiores velit fugit explicabo, excepturi totam quia odio impedit minima ut?</p>
+    <button onclick="color()">color</button>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta error placeat quaerat voluptates ut. Animi veniam voluptates iure nulla tenetur.</p>
+    <button onclick="changesize()">resize</button>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eius odio, aut inventore labore maiores modi vitae repellat ut repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, maiores! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis tempore quos a expedita mollitia ipsam consectetur! Quos temporibus voluptatem quasi?</p>
+    <button onclick="hide()">hide</button>
+    <hr>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident laborum omnis, ipsa suscipit quaerat esse perspiciatis ullam iste delectus modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo magnam distinctio magni laborum, fugiat quia molestiae eum quae beatae ea.</p>
+    <button onclick="background()">change background</button>
+</div>
+<script>
+       function color()
+       {
+            var a = document.getElementsByTagName("p")[0];
+            a.style.color='red'; 
+            a.style.fontWeight="bold"
+       }
+       function changesize()
+       {
+           document.getElementsByTagName("p")[1].style.fontSize="200%";
+       }
+       function hide()
+       {
+           document.getElementsByTagName("p")[2].style.display="none";
+       }
+       function background()
+       {
+           document.getElementsByTagName("p")[3].style.background="yellow";
+       }
+    </script>
+</body>
+</html>
